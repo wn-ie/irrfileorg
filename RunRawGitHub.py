@@ -7,7 +7,7 @@ try:
     subargs = sys.argv[2:]
 except:
     inputurl = input('paste the GitHub url below:\n> ')
-if '/WinnieSchLin/' in inputurl:
+if '/wn-ie/' in inputurl:
     rawpyurl = inputurl.replace('github.com', 'raw.githubusercontent.com').replace('/blob', '')
     rawpycode = requests.get(rawpyurl)
     exec(rawpycode.text)
