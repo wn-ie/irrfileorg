@@ -13,7 +13,7 @@ for each file listed below in the [raw file links section](https://github.com/wn
 2. Open a blank plain text file on your computer (you can use the "Notepad" application that comes with Windows)
 3. Copy *all* of the text from the webpage, and paste it into the blank plain text file
 4. Save this plain text file with the extension `.py` (instead of `.txt`) 
-5. In the same text editor, find and modify the example paths and years (in all caps, they'll look like `P:\\ATH\\TO\\YOUR\\SOURCE\\DIRECTORY\\` or `X-YEAR-HERE`) so that they go to your specific locations. Make sure to use two backslashes (`\\`) instead of one (`\`) and to not accidentally delete the quotation marks(`"`). 
+5. In the same text editor, find and modify the example paths and years (in all caps, they're near the top of the file and look like `"P:\\ATH\\TO\\YOUR\\SOURCE\\DIRECTORY\\"` or `"X-YEAR-HERE"`) so that they go to your specific locations. Make sure to use two backslashes (`\\`) instead of one (`\`) and to not accidentally delete the quotation marks(`"`). 
     - Lines that start with `#` are comments, which explain what each portion of the script is doing.
 6. Once your new .py file has been modified, then open a new command prompt window (by pressing the start button and then typing 'cmd'). 
 7. In this command prompt window, type `py`, followed by the path of the file you want to run. For example, `py P:\ath\to\file.py` or `py P:\ath\to\a\different\file.py`, and hit enter to run the file.
