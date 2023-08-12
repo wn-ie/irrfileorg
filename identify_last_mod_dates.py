@@ -3,6 +3,18 @@
 # import necessary modules
 import os, time, datetime, csv
 
+# ------------------------------------------------
+# TO MODIFY BEFORE USING:
+
+# source_directory is the path where your content files are located
+source_directory = "P:\\ATH\\TO\\YOUR\\SOURCE\\DIRECTORY"
+
+# log_directory is where you want files about this process to be saved 
+# (files like the list of all your files and their last modified dates). 
+# I'd recommend somewhere easy to find, like a new folder on your desktop.
+log_directory = "P:\\ATH\\TO\\LOG\\DIRECTORY"
+# ------------------------------------------------
+
 # create variables to store all of the filepaths
 all_filepaths = set()
 
@@ -15,7 +27,7 @@ frequency_set = set()
 year_totaler = 0
 
 # for each file in your source folder location
-for root, dirs, files in os.walk('P:\\ATH\\TO\\YOUR\\SOURCE\\DIRECTORY\\'):
+for root, dirs, files in os.walk(source_directory):
     for file in files:
 
         # find the full path for the file
@@ -47,13 +59,13 @@ for i in all_filepaths:
             mod_dict[i] = modified_year
 
 # save the results to a csv file on your desktop
-with open("P:\\ATH\\TO\\YOUR\\DESKTOP\\filemodified.csv", 'w', newline = '') as export_csv:
+with open("%s\\files_modifiedyears.csv" % log_directory, 'w', newline = '') as export_csv:
     writer = csv.writer(export_csv, delimiter='`')
     for key in mod_dict.keys():
         writer.writerow((key,mod_dict[key]))
 
 # open that same file 
-with open("P:\\ATH\\TO\\YOUR\\DESKTOP\\filemodified.csv", newline = '') as csv_file:
+with open("%s\\files_modifiedyears.csv" % log_directory, newline = '') as csv_file:
     reader = csv.reader(csv_file, delimiter='`')
     # save the information in the file as "csv_list"
     csv_list = list(reader)

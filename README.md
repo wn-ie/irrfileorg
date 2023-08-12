@@ -1,5 +1,5 @@
 # irrfileorg
-**Working Towards Long-Term Preservation in a Non-Preservation Environment: a Case Study and Tutorial of *I*dentifying, *R*eplicating, and *R*estructuring *File Org*anization for Permanent Storage**
+**Working Towards Long-Term Preservation in a Non-Preservation Environment: *I*dentifying, *R*eplicating, and *R*estructuring *File Org*anization**
 ## general requirements
 In order to run this code, you'll need python.
 
