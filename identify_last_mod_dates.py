@@ -15,7 +15,7 @@ frequency_set = set()
 year_totaler = 0
 
 # for each file in your source folder location
-for root, dirs, files in os.walk('P:\\ath\\to\\your\\source\\directory\\'):
+for root, dirs, files in os.walk('P:\\ATH\\TO\\YOUR\\SOURCE\\DIRECTORY\\'):
     for file in files:
 
         # find the full path for the file
@@ -47,13 +47,13 @@ for i in all_filepaths:
             mod_dict[i] = modified_year
 
 # save the results to a csv file on your desktop
-with open("P:\\ath\\to\\your\\Desktop\\filemodified.csv", 'w', newline = '') as export_csv:
+with open("P:\\ATH\\TO\\YOUR\\DESKTOP\\filemodified.csv", 'w', newline = '') as export_csv:
     writer = csv.writer(export_csv, delimiter='`')
     for key in mod_dict.keys():
         writer.writerow((key,mod_dict[key]))
 
 # open that same file 
-with open("P:\\ath\\to\\your\\Desktop\\filemodified.csv", newline = '') as csv_file:
+with open("P:\\ATH\\TO\\YOUR\\DESKTOP\\filemodified.csv", newline = '') as csv_file:
     reader = csv.reader(csv_file, delimiter='`')
     # save the information in the file as "csv_list"
     csv_list = list(reader)

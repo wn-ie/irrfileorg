@@ -4,20 +4,20 @@
 import sys, os, subprocess
 
 # set location of the destination directory
-basedestination = "P:\\ath\\to\\destination\\of\\x-year\\"
+basedestination = "P:\\ATH\\TO\\DESTINATION\\OF\\X-YEAR\\"
 
 # set location of the robocopy log
-robologpath = "/unilog+:P:\\ath\\to\\your\\Desktop\\robocopy_log.txt"
+robologpath = "/unilog+:P:\\ATH\\TO\\YOUR\\DESKTOP\\robocopy_log.txt"
 
 # set location of the robocopy errors log
-roboerrorspath = r"P:\\ath\\to\\your\\Desktop\\robocopy_errors.txt"
+roboerrorspath = r"P:\\ATH\\TO\\YOUR\\DESKTOP\\robocopy_errors.txt"
 
 # set counters for successful transfers and transfers with errors
 erroracc = 0
 successacc = 0
 
 # open the txt file containing paths from X year
-with open(r"P:\\ath\\to\\your\\Desktop\\X-YEAR_filepaths.txt", encoding='utf-8') as cp:
+with open(r"P:\\ATH\\TO\\YOUR\\DESKTOP\\X-YEAR_filepaths.txt", encoding='utf-8') as cp:
     txtfilepaths = (cp.read()).split('''\n''')
 
 # for each file in X year
@@ -29,7 +29,7 @@ for filepath in txtfilepaths:
         filedir = os.path.dirname(filepath)
 
         # remove any folders that you don't want in the destination location, such as "Current"
-        destfiledir = (os.path.dirname(filepath)).replace('P:\\Newspapers\\Current\\', '').replace('P:\\ath\\to\\other\\folders\\to\\exclude', '').replace('P:\\ath\\to\\source\\directory', '')
+        destfiledir = (os.path.dirname(filepath)).replace('P:\\ATH\\OF\\FOLDER\\TO\\EXCLUDE\\', '').replace('P:\\ATH\\TO\\SOURCE\\DIRECTORY\\', '')
         
         # create full destination path
         robodestination = basedestination + destfiledir
